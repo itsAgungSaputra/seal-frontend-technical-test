@@ -1,11 +1,12 @@
 import React from 'react';
 import { extractCategory, formatDate } from '../utils/utils';
+import { Link } from 'react-router-dom';
 
 const NewsCard = ({ news }) => {
   const category = extractCategory(news.link);
 
   return (
-    <div className="rounded-lg p-2 flex flex-col">
+    <Link to="/detailberita" state={news} className="rounded-lg p-2 flex flex-col">
       <img
         src={news.thumbnail}
         alt={news.title}
@@ -18,7 +19,7 @@ const NewsCard = ({ news }) => {
         <span className="capitalize text-blue-500">{category}</span>{" "}
         <span className="text-gray-500">•</span> {formatDate(news.pubDate)}
       </p>
-    </div>
+    </Link>
   );
 };
 

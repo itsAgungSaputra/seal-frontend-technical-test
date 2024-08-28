@@ -1,5 +1,6 @@
 import { FaCalendarDays, FaArrowRightLong, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Carousel = ({ category }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -49,7 +50,7 @@ const Carousel = ({ category }) => {
                   />
                   <div className="p-6 flex-1">
                     <h1 className="text-sm font-semibold mb-2 line-clamp-2 text-gray-500">
-                    Headline
+                      Headline
                     </h1>
                     <h2 className="text-2xl font-bold mb-2">{slide.title}</h2>
                     <p className="mt-4 text-gray-700">{slide.description}</p>
@@ -57,14 +58,13 @@ const Carousel = ({ category }) => {
                       <FaCalendarDays />
                       {new Date(slide.pubDate).toLocaleDateString()}
                     </p>
-                    <a
-                      href={slide.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      to="/detailberita"
+                      state={slide}
                       className="text-xs text-blue-500  flex items-center gap-2 hover:underline mt-4"
                     >
                       Baca Selengkapnya <FaArrowRightLong />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
