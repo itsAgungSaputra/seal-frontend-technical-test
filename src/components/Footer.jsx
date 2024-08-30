@@ -18,10 +18,10 @@ const Footer = () => {
             />
             <span className={styles.logoText}>Berita Kini</span>
           </div>
-          <p className="mb-12">
+          <p className="font-extralight mb-12">
             &copy; 2023 Berita Kini. All Rights Reserved.
           </p>
-          <p>Ikuti Kami</p>
+          <p className="text-xl">Ikuti Kami</p>
           <div className={styles.socialIcons}>
             <NavLink to="#" aria-label="YouTube">
               <div className={styles.iconWrapper}>

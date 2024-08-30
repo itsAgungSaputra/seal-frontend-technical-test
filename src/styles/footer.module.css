@@ -1,9 +1,7 @@
 .footer {
     background-color: #2C3C4D;
     color: #FFF;
-   
-   
-    padding: 30px 90px 30px 40px;
+    padding: 30px 90px 30px 40px; 
     border-top: 1px solid #000;
 }
 
@@ -12,7 +10,7 @@
     justify-content: space-between;
     gap: 72px;
     height: 321px;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Nunito Sans", sans-serif;
 }
 
 .logoSection {
@@ -49,7 +47,6 @@
 .socialIcons {
     margin-top: 15px;
     display: flex;
-    
 }
 
 .iconWrapper {
@@ -57,16 +54,15 @@
     display: inline-block;
     width: 35px;
     height: 35px;
-    background-color: #fff;
-    border-radius: 50%;
+    background-color: #E0E0E0;
+    border-radius: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .icon {
-    color: black;
+    color: #333333;
     font-size: 24px;
 }
 
@@ -75,7 +71,6 @@
     justify-content: space-between; 
     gap: 30px; 
     flex: 2;
-    
 }
 
 .linksSection > div {
@@ -87,7 +82,7 @@
 .linksSection h4 {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 22px;
-    font-weight: 100;
+    font-weight: normal;
     margin-bottom: 10px; 
 }
 
@@ -95,12 +90,10 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    
 }
 
 .linksSection ul li {
     margin-bottom: 8px;
-    
 }
 
 .linksSection ul li a {
@@ -121,7 +114,6 @@
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    
 }
 
 .forminput {
@@ -134,12 +126,10 @@
     color: #333;
     border-radius: 8px 0 0 8px;
     font-family: 'Nunito Sans', sans-serif;
-    
 }
 
 .forminput::placeholder {
     color: #999;
-    
 }
 
 .submitButton {
@@ -149,7 +139,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 0 8px 8px 0;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -161,4 +151,43 @@
 .iconsend {
     color: #fff;
     font-size: 16px;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 20px; 
+    }
+
+    .footerContainer {
+        flex-direction: column; 
+        gap: 40px; 
+        text-align: center; 
+        height: auto; 
+    }
+
+    .logoo {
+        justify-content: center; 
+        flex-direction: column; 
+    }
+
+    .logoText {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .socialIcons {
+        justify-content: center; 
+        gap: 15px; 
+    }
+
+    .linksSection {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px; 
+    }
+
+    .linksSection h4 {
+        font-size: 20px;
+    }
 }

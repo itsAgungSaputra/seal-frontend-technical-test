@@ -10,6 +10,7 @@ import { Pagination as SwiperPagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import styles from "../styles/bannerslider.module.css";
 
 const Home = () => {
   const [news, setNews] = useState([]);
@@ -84,7 +85,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="recomendation">
+      <section className="recomendation mb-20">
         <h1 className="text-2xl font-bold mb-4 border-blue-500 border-l-4">
           <span>&nbsp;</span>Rekomendasi Untuk Anda
         </h1>
@@ -108,7 +109,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="BannerSlider pb-8">
+      <section className="BannerSlider pb-12">
         <Swiper
           pagination={{
             dynamicBullets: true,
@@ -118,21 +119,21 @@ const Home = () => {
         >
           <SwiperSlide>
             <img
-              src="/images/banner1.jpg"
+              src="/images/banner.png"
               alt="Banner"
               className="rounded-md mb-2 w-100 h-96 object-cover mx-auto"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src="/images/banner2.jpg"
+              src="/images/banner.png"
               alt="Banner"
               className="rounded-md mb-2 w-100 h-96 object-cover mx-auto"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src="/images/banner3.jpg"
+              src="/images/banner.png"
               alt="Banner"
               className="rounded-md mb-2 w-100 h-96 object-cover mx-auto"
             />

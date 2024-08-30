@@ -5,6 +5,7 @@ import styles from "../styles/header.module.css";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for menu toggle
   const location = useLocation();
 
   useEffect(() => {
@@ -20,6 +21,10 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""}`}>
       <div className={styles.logo}>
@@ -32,7 +37,18 @@ const Header = () => {
         />
         <span className={styles.logoText}>Berita Kini</span>
       </div>
-      <nav className={styles.nav}>
+
+      <div className={styles.hamburger} onClick={toggleMenu}>
+        <div className={styles.line}></div>
+        <div className={styles.line}></div>
+        <div className={styles.line}></div>
+      </div>
+
+      <nav
+        className={`${styles.nav} ${
+          isMenuOpen ? styles.navOpen : styles.navClose
+        }`}
+      >
         <Link
           to="/"
           className={`${styles.navLink} ${

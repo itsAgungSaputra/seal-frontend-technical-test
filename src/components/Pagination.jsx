@@ -1,4 +1,4 @@
-import { FaArrowLeft, FaArrowRight  } from "react-icons/fa";
+import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import ProptTypes from "prop-types";
 
 export default function Pagination({
@@ -15,7 +15,7 @@ export default function Pagination({
         onClick={() => onPageChange(currentPage - 1)}
         aria-label="Previous page"
       >
-        <FaArrowLeft className="h-4 w-4" />
+        <BsArrowLeftShort className="h-4 w-4" />
         Previous
       </button>
 
@@ -76,7 +76,7 @@ export default function Pagination({
         aria-label="Next page"
       >
         Next
-        <FaArrowRight className="h-4 w-4" />
+        <BsArrowRightShort className="h-4 w-4" />
       </button>
     </div>
   );

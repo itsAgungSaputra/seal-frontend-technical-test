@@ -1,6 +1,8 @@
-import { FaCalendarDays, FaArrowRightLong, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { BsCalendarEvent, BsArrowUpRight } from "react-icons/bs";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { formatDate } from "../utils/utils";
 
 const Carousel = ({ category }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -49,21 +51,25 @@ const Carousel = ({ category }) => {
                     className="w-1/2 object-cover rounded-md aspect-[2/1] flex-1"
                   />
                   <div className="p-6 flex-1">
-                    <h1 className="text-sm font-semibold mb-2 line-clamp-2 text-gray-500">
+                    <h1 className="text-base font-semibold mb-2 text-gray-500">
                       Headline
                     </h1>
-                    <h2 className="text-2xl font-bold mb-2">{slide.title}</h2>
-                    <p className="mt-4 text-gray-700">{slide.description}</p>
-                    <p className="text-xs text-gray-600 flex items-center gap-2">
-                      <FaCalendarDays />
-                      {new Date(slide.pubDate).toLocaleDateString()}
+                    <h2 className="text-3xl font-semibold mb-2">
+                      {slide.title}
+                    </h2>
+                    <p className="mt-4 text-gray-700 mb-4">
+                      {slide.description}
+                    </p>
+                    <p className="text-sm text-gray-600 flex items-center gap-2">
+                      <BsCalendarEvent />
+                      {formatDate(slide.pubDate)}
                     </p>
                     <Link
                       to="/detailberita"
                       state={slide}
-                      className="text-xs text-blue-500  flex items-center gap-2 hover:underline mt-4"
+                      className="text-sm font-medium text-blue-500  flex items-center gap-2 hover:underline mt-4"
                     >
-                      Baca Selengkapnya <FaArrowRightLong />
+                      Baca Selengkapnya <BsArrowUpRight />
                     </Link>
                   </div>
                 </div>
@@ -91,15 +97,15 @@ const Carousel = ({ category }) => {
         </button>
       </div> */}
 
-      <div className="text-center flex justify-center items-center space-x-4">
+      <div className="text-center flex justify-center items-center space-x-4 font-medium">
         <button
           onClick={prevSlide}
           className="bg-white text-gray-800 p-2 rounded-full"
         >
           <FaChevronLeft />
         </button>
-        <p className="text-sm text-gray-600">
-          {currentSlide + 1} dari {slides.length}
+        <p className="text-sm text-gray-600 p-4">
+          {currentSlide + 1} <span className="px-4">dari</span> {slides.length}
         </p>
         <button
           onClick={nextSlide}
