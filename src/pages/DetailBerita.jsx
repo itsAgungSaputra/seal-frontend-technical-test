@@ -73,8 +73,8 @@ if (!newsData) return <Navigate to="/" replace={true} />;
       </nav>
       <div className="flex flex-col md:flex-row gap-8">
         <div className="max-w-4xl w-full md:w-2/3">
-          <h1 className="text-2xl font-bold mb-4">{newsData.title}</h1>
-          <div className="text-sm text-gray-500 mb-4">
+          <h1 className="text-3xl font-bold mb-4" style={{ fontFamily: "Sora", color: "#333333" }}>{newsData.title}</h1>
+          <div className="text-sm text-gray-500 mb-4 font-semibold">
             <a href="#" className="text-blue-500 hover:underline">
               Politik
             </a>{" "}
