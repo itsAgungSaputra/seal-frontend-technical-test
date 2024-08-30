@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import NewsCard from "../components/NewsCard";
 import PopularNewsCard from "../components/PopulerCard";
-import { FaHouseChimney } from "react-icons/fa6";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { BsHouse } from "react-icons/bs";
 
 const comments = [
   {
@@ -58,15 +59,15 @@ if (!newsData) return <Navigate to="/" replace={true} />;
     <div className="container mx-auto p-5 mt-20">
       <nav className="flex text-sm text-gray-600 mb-20 gap-2">
         <a href="#" className="hover:underline flex gap-2 items-center">
-          <FaHouseChimney />
+          <BsHouse />
           Beranda
         </a>{" "}
-        &gt;
-        <a href="#" className="hover:underline">
+        <a href="#" className="hover:underline flex gap-2 items-center">
+          <MdKeyboardArrowRight />
           Nasional
         </a>{" "}
-        &gt;
-        <a href="#" className="hover:underline">
+        <a href="#" className="hover:underline flex gap-2 items-center">
+          <MdKeyboardArrowRight />
           Detail
         </a>
       </nav>

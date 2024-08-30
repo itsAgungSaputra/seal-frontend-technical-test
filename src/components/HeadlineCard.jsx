@@ -3,6 +3,7 @@ import { BsCalendarEvent, BsArrowUpRight } from "react-icons/bs";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { formatDate } from "../utils/utils";
+import { RxFontStyle } from "react-icons/rx";
 
 const Carousel = ({ category }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -54,7 +55,10 @@ const Carousel = ({ category }) => {
                     <h1 className="text-base font-semibold mb-2 text-gray-500">
                       Headline
                     </h1>
-                    <h2 className="text-3xl font-semibold mb-2">
+                    <h2
+                      className="text-3xl font-bold mb-2"
+                      style={{ fontFamily: "Nunito Sans", color: "#333333" }}
+                    >
                       {slide.title}
                     </h2>
                     <p className="mt-4 text-gray-700 mb-4">
